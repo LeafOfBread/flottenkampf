@@ -1,8 +1,10 @@
 #ifndef SHIP_H
 #define SHIP_H
 #include <string>
-
+#include <time.h>
 using namespace std;
+
+
 
 class ship
 {
@@ -14,6 +16,8 @@ class ship
         int shipSize;
         int damage;
         int specialAmount = 3;
+        int x;
+        int y;
 
         virtual std::string getType() const = 0;    //getter fuer typ namen
         virtual std::string getSpecial() const = 0; //getter fuer special attack namen

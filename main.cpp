@@ -47,7 +47,36 @@ void showShips(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetS
         else if (enemyFleet[i]->getType() == "Kreuzer" && enemyFleet[i]->isDestroyed()) cout << WHITE << "| " << enemyFleet[i]->getType() << "     " << "0" << "     " << enemyFleet[i]->shipSize << "        " << enemyFleet[i]->damage << "      " << enemyFleet[i]->getSpecial() << " " << enemyFleet[i]->specialAmount << "    |\n";
     }
     cout << "__________________________________________________________\n\n";
+
+    const int gridSize = 10;
+    char map[gridSize][gridSize];
+
+    for (int i = 0; i < gridSize; i++) {
+        for (int j = 0; j < gridSize; j++) {
+            map[i][j] = '.';
+        }
+    }
+
+    for (int k = 0; k < fleetSize; k++) {
+        if (fleet[k]->x >= 0 && fleet[k]->x < gridSize && fleet[k]->y >= 0 && fleet[k]->y < gridSize) {
+            map[fleet[k]->y][fleet[k]->x] = 'X';
+        }
+        if (enemyFleet[k]->x >= 0 && enemyFleet[k]->x < gridSize && enemyFleet[k]->y >= 0 && enemyFleet[k]->y < gridSize)
+        {
+            map[enemyFleet[k]->y][fleet[k]->x] = 'x';
+        }
+    }
+
+    for (int i = 0; i < gridSize; i++) {
+        for (int j = 0; j < gridSize; j++) {
+            if (map[i][j] == 'X') cout << GREEN << " X ";
+            else if (map[i][j] == 'x') cout << RED << " X ";
+            else cout << BLUE << " . " << WHITE;
+        }
+        cout << "\n";
+    }
 }
+
 
 void playerTurn(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetSize)
 {
@@ -89,6 +118,46 @@ inputAgain:;    //goto stelle fuer falsche inputs
     }
 }
 
+bool coordinatesTaken(int x, int y, const std::vector<ship*>& fleet, int fleetSize) {
+    for (int i = 0; i < fleetSize; ++i) {
+        if (fleet[i]->x == x && fleet[i]->y == y) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool coordinatesTakenByAnyFleet(int x, int y, const std::vector<ship*>& fleet1, int fleetSize1, const std::vector<ship*>& fleet2, int fleetSize2) {
+    return coordinatesTaken(x, y, fleet1, fleetSize1) || coordinatesTaken(x, y, fleet2, fleetSize2);
+}
+
+void shipPositionRandomizer(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetSize)
+{
+    srand(time(0));
+    // Randomize positions for the player's fleet
+    for (int i = 0; i < fleetSize; ++i) {
+        int x, y;
+        do {
+            x = rand() % 10;
+            y = rand() % 10;
+        } while (coordinatesTaken(x, y, fleet, i) || coordinatesTaken(x, y, enemyFleet, fleetSize)); // Ensure unique coordinates
+        fleet[i]->x = x;
+        fleet[i]->y = y;
+    }
+
+    // Randomize positions for the enemy fleet
+    for (int i = 0; i < fleetSize; ++i) {
+        int x, y;
+        do {
+            x = rand() % 10;
+            y = rand() % 10;
+        } while (coordinatesTakenByAnyFleet(x, y, fleet, fleetSize, enemyFleet, i)); // Ensure unique coordinates
+        enemyFleet[i]->x = x;
+        enemyFleet[i]->y = y;
+    }
+}
+
+
 void enemyTurn(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetSize)
 {
     srand(time(0));
@@ -117,6 +186,7 @@ void enemyTurn(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetS
     }
 }
 
+
 bool playerFleetDefeated(std::vector<ship*>fleet, int fleetSize)
 {
     int destroyedShips = 0;
@@ -126,6 +196,7 @@ bool playerFleetDefeated(std::vector<ship*>fleet, int fleetSize)
     }
     return destroyedShips == fleetSize; //return true oder false ob diese aussage stimmt
 }
+
 
 bool enemyFleetDefeated(std::vector<ship*>enemyFleet, int fleetSize)    //funktioniert gleich wie playerFleetDefeated function
 {
@@ -137,10 +208,12 @@ bool enemyFleetDefeated(std::vector<ship*>enemyFleet, int fleetSize)    //funkti
     return destroyedShips == fleetSize;
 }
 
+
 void clearScreen()  //formatting
 {
     std::cout << "\033[2J\033[H";
 }
+
 
 int main()
 {
@@ -194,6 +267,8 @@ int main()
             break;
         }
     }
+
+    shipPositionRandomizer(fleet,enemyFleet,fleetSize);
 
     while (!playerFleetDefeated(fleet, fleetSize) && !enemyFleetDefeated(enemyFleet, fleetSize))    //solange nicht einer der flotten besiegt ist, geht das spiel weiter
     {

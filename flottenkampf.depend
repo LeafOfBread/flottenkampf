@@ -1,15 +1,16 @@
 # depslib dependency file v1.0
-1716823166 source:c:\users\besitzer\documents\github\flottenkampf\src\jaeger.cpp
+1716881143 source:c:\users\besitzer\documents\github\flottenkampf\src\jaeger.cpp
 	"../include/jaeger.h"
 
 1716805128 c:\users\besitzer\documents\github\flottenkampf\include\jaeger.h
 	"ship.h"
 	<string>
 
-1716823071 c:\users\besitzer\documents\github\flottenkampf\include\ship.h
+1716881072 c:\users\besitzer\documents\github\flottenkampf\include\ship.h
 	<string>
+	<time.h>
 
-1716823166 source:c:\users\besitzer\documents\github\flottenkampf\src\kreuzer.cpp
+1716881143 source:c:\users\besitzer\documents\github\flottenkampf\src\kreuzer.cpp
 	"../include/kreuzer.h"
 
 1716805143 c:\users\besitzer\documents\github\flottenkampf\include\kreuzer.h
@@ -19,14 +20,14 @@
 	"../include/ship.h"
 	<iostream>
 
-1716823166 source:c:\users\besitzer\documents\github\flottenkampf\src\zerstoerer.cpp
+1716881143 source:c:\users\besitzer\documents\github\flottenkampf\src\zerstoerer.cpp
 	"../include/zerstoerer.h"
 	<time.h>
 
 1716805106 c:\users\besitzer\documents\github\flottenkampf\include\zerstoerer.h
 	"ship.h"
 
-1716823073 source:c:\users\besitzer\documents\github\flottenkampf\main.cpp
+1716882288 source:c:\users\besitzer\documents\github\flottenkampf\main.cpp
 	<iostream>
 	"include/ship.h"
 	"include/jaeger.h"
