@@ -12,6 +12,10 @@
 
 using namespace std;
 
+//Stufe 2 hab ich leider nur so halb fertig gemacht
+//die map existiert und funktioniert (meistens), nimmt aber keinen einfluss auf den spielverlauf und schaut halt ganz nett aus i guess
+//LG Daniel :3
+
 void deleteFleet(std::vector<ship*>&fleet, std::vector<ship*>&enemyFleet, int fleetSize) //delete beide flotten um memory leak zu vermeiden
 {
     for (int i = 0; i < fleetSize; i++) //geht durch beide flotten anhand der flottengroesse
@@ -49,17 +53,21 @@ void showShips(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetS
     cout << "__________________________________________________________\n\n";
 
     const int gridSize = 10;
-    char map[gridSize][gridSize];
+    char map[gridSize][gridSize];   //map
 
-    for (int i = 0; i < gridSize; i++) {
-        for (int j = 0; j < gridSize; j++) {
-            map[i][j] = '.';
+    for (int i = 0; i < gridSize; i++)
+    {
+        for (int j = 0; j < gridSize; j++)
+        {
+            map[i][j] = '.';   //fuellt die map mit '.' um eine leere map darzustellen
         }
     }
 
-    for (int k = 0; k < fleetSize; k++) {
-        if (fleet[k]->x >= 0 && fleet[k]->x < gridSize && fleet[k]->y >= 0 && fleet[k]->y < gridSize) {
-            map[fleet[k]->y][fleet[k]->x] = 'X';
+    for (int k = 0; k < fleetSize; k++)
+    {
+        if (fleet[k]->x >= 0 && fleet[k]->x < gridSize && fleet[k]->y >= 0 && fleet[k]->y < gridSize)
+        {
+            map[fleet[k]->y][fleet[k]->x] = 'X';    //falls koordinaten der map mit x und y des schiffes einstimmen ist die koordinate 'X'
         }
         if (enemyFleet[k]->x >= 0 && enemyFleet[k]->x < gridSize && enemyFleet[k]->y >= 0 && enemyFleet[k]->y < gridSize)
         {
@@ -67,8 +75,10 @@ void showShips(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetS
         }
     }
 
-    for (int i = 0; i < gridSize; i++) {
-        for (int j = 0; j < gridSize; j++) {
+    for (int i = 0; i < gridSize; i++)      //ausgabe der Map
+    {
+        for (int j = 0; j < gridSize; j++)
+        {
             if (map[i][j] == 'X') cout << GREEN << " X ";
             else if (map[i][j] == 'x') cout << RED << " X ";
             else cout << BLUE << " . " << WHITE;
@@ -118,40 +128,50 @@ inputAgain:;    //goto stelle fuer falsche inputs
     }
 }
 
-bool coordinatesTaken(int x, int y, const std::vector<ship*>& fleet, int fleetSize) {
-    for (int i = 0; i < fleetSize; ++i) {
-        if (fleet[i]->x == x && fleet[i]->y == y) {
+bool coordinatesTaken(int x, int y, const std::vector<ship*>& fleet, int fleetSize)     //check ob die koordinaten eines schiffes schon besetzt sind
+{
+    for (int i = 0; i < fleetSize; ++i)
+    {
+        if (fleet[i]->x == x && fleet[i]->y == y)
+        {
             return true;
         }
     }
     return false;
 }
 
-bool coordinatesTakenByAnyFleet(int x, int y, const std::vector<ship*>& fleet1, int fleetSize1, const std::vector<ship*>& fleet2, int fleetSize2) {
+bool coordinatesTakenByAnyFleet(int x, int y, const std::vector<ship*>& fleet1, int fleetSize1, const std::vector<ship*>& fleet2, int fleetSize2)   //vergleicht beide flotten ob koordinaten ubereinstimmen
+{
     return coordinatesTaken(x, y, fleet1, fleetSize1) || coordinatesTaken(x, y, fleet2, fleetSize2);
 }
 
-void shipPositionRandomizer(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetSize)
+void shipPositionRandomizer(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetSize)   //randomizes position der schiffe
 {
     srand(time(0));
-    // Randomize positions for the player's fleet
-    for (int i = 0; i < fleetSize; ++i) {
+    //spieler-flotte wird randomized
+    for (int i = 0; i < fleetSize; ++i)
+    {
         int x, y;
-        do {
+        do
+        {
             x = rand() % 10;
             y = rand() % 10;
-        } while (coordinatesTaken(x, y, fleet, i) || coordinatesTaken(x, y, enemyFleet, fleetSize)); // Ensure unique coordinates
+        }
+        while (coordinatesTaken(x, y, fleet, i) || coordinatesTaken(x, y, enemyFleet, fleetSize));   // ensure unique coordinates
         fleet[i]->x = x;
         fleet[i]->y = y;
     }
 
-    // Randomize positions for the enemy fleet
-    for (int i = 0; i < fleetSize; ++i) {
+    // gegner-flotte wird randomized
+    for (int i = 0; i < fleetSize; ++i)
+    {
         int x, y;
-        do {
+        do
+        {
             x = rand() % 10;
             y = rand() % 10;
-        } while (coordinatesTakenByAnyFleet(x, y, fleet, fleetSize, enemyFleet, i)); // Ensure unique coordinates
+        }
+        while (coordinatesTakenByAnyFleet(x, y, fleet, fleetSize, enemyFleet, i));   // ensure unique coordinates
         enemyFleet[i]->x = x;
         enemyFleet[i]->y = y;
     }

@@ -14,10 +14,6 @@ class jaeger : public ship
         std::string getType() const override;
         std::string getSpecial() const override;
         void specialAttack(int &enemyHP, int &shipSize) const override;
-
-    protected:
-
-    private:
 };
 
 #endif // JAEGER_H

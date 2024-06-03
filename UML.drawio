@@ -1,0 +1,40 @@
+<mxfile host="65bd71144e">
+    <diagram id="KCCN2YCRi2qPYfiR_Bu1" name="Page-1">
+        <mxGraphModel dx="767" dy="603" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="7" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Ships&lt;br&gt;&lt;br&gt;int hp;&lt;br&gt;int shipSize;&lt;br&gt;int damage;&lt;br&gt;int specialAmount = 3;&lt;br&gt;int x;&lt;br&gt;int y;&lt;br&gt;&lt;br&gt;string getType();&lt;br&gt;string getSpecial();&lt;br&gt;bool isDestroyed();&lt;br&gt;void specialAttack" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="100" width="180" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Jäger&lt;br&gt;&lt;br&gt;overrides:&lt;br&gt;getType, getSpecial, specialAttack&lt;br&gt;and stats" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="330" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Zerstörer&lt;br&gt;&lt;br&gt;overrides:&lt;br&gt;getType, getSpecial, specialAttack&lt;br&gt;and stats" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="295" y="330" width="210" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Kreuzer&lt;br&gt;&lt;br&gt;overrides:&lt;br&gt;getType, getSpecial, specialAttack&lt;br&gt;and stats" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="330" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="inherits" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="260" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="inherits" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="395" y="290" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="inherits" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="260" width="60" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
