@@ -7,11 +7,6 @@ kreuzer::kreuzer()
     damage = 50;
 }
 
-kreuzer::~kreuzer()
-{
-    //dtor
-}
-
 void kreuzer::specialAttack(int &enemyHP, int &shipSize) const
 {
     if ((rand()%10+1)>=shipSize)    //wenn angreif erfolgreich -> callt die methode rekursiv erneut auf, bis der check failed

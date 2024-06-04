@@ -16,7 +16,7 @@ using namespace std;
 //die map existiert und funktioniert (meistens), nimmt aber keinen einfluss auf den spielverlauf und schaut halt ganz nett aus i guess
 //LG Daniel :3
 
-void deleteFleet(std::vector<ship*>&fleet, std::vector<ship*>&enemyFleet, int fleetSize) //delete beide flotten um memory leak zu vermeiden
+void deleteFleet(std::vector<ship*>& fleet, std::vector<ship*>& enemyFleet, int fleetSize) //delete beide flotten um memory leak zu vermeiden
 {
     for (int i = 0; i < fleetSize; i++) //geht durch beide flotten anhand der flottengroesse
     {
@@ -25,7 +25,7 @@ void deleteFleet(std::vector<ship*>&fleet, std::vector<ship*>&enemyFleet, int fl
     }
 }
 
-void showShips(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetSize) //ausgabe der flotten inkl. ship information
+void showShips(const std::vector<ship*>& fleet, const std::vector<ship*>& enemyFleet, int fleetSize) //ausgabe der flotten inkl. ship information
 {
     cout << BLUE << "__________________________________________________________\n";
     cout << WHITE << " Schiffstyp  Huelle  Groesse  Schaden  Spezial \n";
@@ -112,11 +112,11 @@ inputAgain:;    //goto stelle fuer falsche inputs
         goto inputAgain;    //go back to input
     }
 
-    if (attackType == 1 && (rand()%10+1)>=enemyFleet[enemyShip-1]->shipSize && !fleet[playerShip-1]->isDestroyed()) //wenn normaler angriff, treffercheck stimmt und das angregriffene schiff nicht zerstoert ist -> ziehe HP vom gegner schiff ab
+    if (attackType == 1 && (rand()%10+1)>=enemyFleet[enemyShip-1]->shipSize) //wenn normaler angriff, treffercheck stimmt und das angregriffene schiff nicht zerstoert ist -> ziehe HP vom gegner schiff ab
     {
         enemyFleet[enemyShip-1]->hp = enemyFleet[enemyShip-1]->hp - fleet[playerShip-1]->damage;    //zieht hp vom ziel ab
     }
-    else if (attackType == 2 && !fleet[playerShip-1]->isDestroyed() && fleet[playerShip-1]->specialAmount > 0)  //special attacke, kann nur 3 mal pro schiff eingesetzt werden
+    else if (attackType == 2 && fleet[playerShip-1]->specialAmount > 0)  //special attacke, kann nur 3 mal pro schiff eingesetzt werden
     {
         fleet[playerShip-1]->specialAttack(enemyFleet[enemyShip-1]->hp, enemyFleet[enemyShip-1]->shipSize);
         fleet[playerShip-1]->specialAmount--;
@@ -145,7 +145,7 @@ bool coordinatesTakenByAnyFleet(int x, int y, const std::vector<ship*>& fleet1, 
     return coordinatesTaken(x, y, fleet1, fleetSize1) || coordinatesTaken(x, y, fleet2, fleetSize2);
 }
 
-void shipPositionRandomizer(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetSize)   //randomizes position der schiffe
+void shipPositionRandomizer(const std::vector<ship*>& fleet, const std::vector<ship*>& enemyFleet, int fleetSize)   //randomizes position der schiffe
 {
     srand(time(0));
     //spieler-flotte wird randomized
@@ -207,7 +207,7 @@ void enemyTurn(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetS
 }
 
 
-bool playerFleetDefeated(std::vector<ship*>fleet, int fleetSize)
+bool playerFleetDefeated(const std::vector<ship*>& fleet, int fleetSize)
 {
     int destroyedShips = 0;
     for (int i = 0; i < fleetSize; i++) //wenn menge and zerstoerten schiffen mit flottengroesse uebereinstimmt, sind ALLE schiffe zerstoert
@@ -218,7 +218,7 @@ bool playerFleetDefeated(std::vector<ship*>fleet, int fleetSize)
 }
 
 
-bool enemyFleetDefeated(std::vector<ship*>enemyFleet, int fleetSize)    //funktioniert gleich wie playerFleetDefeated function
+bool enemyFleetDefeated(const std::vector<ship*>& enemyFleet, int fleetSize)    //funktioniert gleich wie playerFleetDefeated function
 {
     int destroyedShips = 0;
     for (int i = 0; i < fleetSize; i++)

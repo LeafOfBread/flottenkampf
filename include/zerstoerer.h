@@ -8,7 +8,6 @@ class zerstoerer : public ship
 {
     public:
         zerstoerer();
-        virtual ~zerstoerer();
 
         std::string getType() const override;
         std::string getSpecial() const override;

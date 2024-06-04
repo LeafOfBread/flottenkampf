@@ -7,11 +7,6 @@ jaeger::jaeger()
     damage = 30;
 }
 
-jaeger::~jaeger()
-{
-    //dtor
-}
-
 void jaeger::specialAttack(int &enemyHP, int &shipSize) const
 {
         if ((rand()%10+1)>=9)

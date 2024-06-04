@@ -8,11 +8,6 @@ zerstoerer::zerstoerer()
     damage = 60;
 }
 
-zerstoerer::~zerstoerer()
-{
-    //dtor
-}
-
 void zerstoerer::specialAttack(int &enemyHP, int &shipSize) const
 {
     srand(time(0));

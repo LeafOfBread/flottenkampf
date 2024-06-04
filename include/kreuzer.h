@@ -8,7 +8,6 @@ class kreuzer : public ship
 {
     public:
         kreuzer();
-        virtual ~kreuzer();
 
         std::string getType() const override;
         std::string getSpecial() const override;

@@ -10,7 +10,6 @@ class jaeger : public ship
 {
     public:
         jaeger();
-        virtual ~jaeger() override;
         std::string getType() const override;
         std::string getSpecial() const override;
         void specialAttack(int &enemyHP, int &shipSize) const override;

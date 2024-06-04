@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<results version="2">
+    <cppcheck version="2.14.1" />
+    <errors>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="include\ship.h" line="4" column="0" />
+        </error>
+        <error id="syntaxError" severity="error" msg="Code &apos;classship{&apos; is invalid C code. Use --std or --language to configure the language." verbose="Code &apos;classship{&apos; is invalid C code. Use --std or --language to configure the language." file0="include/ship.h">
+            <location file="include\ship.h" line="6" column="1" />
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;time.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;time.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="src\zerstoerer.cpp" line="2" column="0" />
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="src\ship.cpp" line="2" column="0" />
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="include\jaeger.h" line="6" column="0" />
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="main.cpp" line="1" column="0" />
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="main.cpp" line="6" column="0" />
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;time.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;time.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="main.cpp" line="7" column="0" />
+        </error>
+        <error id="normalCheckLevelMaxBranches" severity="information" msg="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." verbose="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." file0="main.cpp">
+            <location file="main.cpp" line="0" column="0" />
+        </error>
+        <error id="constParameterReference" severity="style" msg="Parameter &apos;fleet&apos; can be declared as reference to const" verbose="Parameter &apos;fleet&apos; can be declared as reference to const" cwe="398" file0="main.cpp">
+            <location file="main.cpp" line="19" column="38" info="Parameter &apos;fleet&apos; can be declared as reference to const" />
+            <symbol>fleet</symbol>
+        </error>
+        <error id="constParameterReference" severity="style" msg="Parameter &apos;enemyFleet&apos; can be declared as reference to const" verbose="Parameter &apos;enemyFleet&apos; can be declared as reference to const" cwe="398" file0="main.cpp">
+            <location file="main.cpp" line="19" column="65" info="Parameter &apos;enemyFleet&apos; can be declared as reference to const" />
+            <symbol>enemyFleet</symbol>
+        </error>
+        <error id="checkersReport" severity="information" msg="Active checkers: There was critical errors (use --checkers-report=&lt;filename&gt; to see details)" verbose="Active checkers: There was critical errors (use --checkers-report=&lt;filename&gt; to see details)" />
+    </errors>
+</results>
