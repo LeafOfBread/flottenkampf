@@ -1,0 +1,83 @@
+main.cpp:1:0: information: Include file: <iostream> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <iostream>
+^
+include\ship.h:3:0: information: Include file: <string> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string>
+^
+include\ship.h:4:0: information: Include file: <time.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <time.h>
+^
+include\jaeger.h:6:0: information: Include file: <string> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string>
+^
+main.cpp:6:0: information: Include file: <vector> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <vector>
+^
+main.cpp:7:0: information: Include file: <time.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <time.h>
+^
+main.cpp:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+include\jaeger.h:13:18: style: The destructor '~jaeger' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+        virtual ~jaeger();
+                 ^
+include\ship.h:13:18: note: Virtual destructor in base class
+        virtual ~ship();
+                 ^
+include\jaeger.h:13:18: note: Destructor in derived class
+        virtual ~jaeger();
+                 ^
+include\zerstoerer.h:11:18: style: The destructor '~zerstoerer' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+        virtual ~zerstoerer();
+                 ^
+include\ship.h:13:18: note: Virtual destructor in base class
+        virtual ~ship();
+                 ^
+include\zerstoerer.h:11:18: note: Destructor in derived class
+        virtual ~zerstoerer();
+                 ^
+include\kreuzer.h:11:18: style: The destructor '~kreuzer' overrides a destructor in a base class but is not marked with a 'override' specifier. [missingOverride]
+        virtual ~kreuzer();
+                 ^
+include\ship.h:13:18: note: Virtual destructor in base class
+        virtual ~ship();
+                 ^
+include\kreuzer.h:11:18: note: Destructor in derived class
+        virtual ~kreuzer();
+                 ^
+main.cpp:148:47: performance: Function parameter 'fleet' should be passed by const reference. [passedByValue]
+void shipPositionRandomizer(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetSize)   //randomizes position der schiffe
+                                              ^
+main.cpp:148:72: performance: Function parameter 'enemyFleet' should be passed by const reference. [passedByValue]
+void shipPositionRandomizer(std::vector<ship*>fleet, std::vector<ship*>enemyFleet, int fleetSize)   //randomizes position der schiffe
+                                                                       ^
+main.cpp:19:37: style: Parameter 'fleet' can be declared as reference to const [constParameterReference]
+void deleteFleet(std::vector<ship*>&fleet, std::vector<ship*>&enemyFleet, int fleetSize) //delete beide flotten um memory leak zu vermeiden
+                                    ^
+main.cpp:19:63: style: Parameter 'enemyFleet' can be declared as reference to const [constParameterReference]
+void deleteFleet(std::vector<ship*>&fleet, std::vector<ship*>&enemyFleet, int fleetSize) //delete beide flotten um memory leak zu vermeiden
+                                                              ^
+src\ship.cpp:2:0: information: Include file: <iostream> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <iostream>
+^
+src\ship.cpp:6:7: warning: Member variable 'ship::hp' is not initialized in the constructor. [uninitMemberVar]
+ship::ship()
+      ^
+src\ship.cpp:6:7: warning: Member variable 'ship::shipSize' is not initialized in the constructor. [uninitMemberVar]
+ship::ship()
+      ^
+src\ship.cpp:6:7: warning: Member variable 'ship::damage' is not initialized in the constructor. [uninitMemberVar]
+ship::ship()
+      ^
+src\ship.cpp:6:7: warning: Member variable 'ship::x' is not initialized in the constructor. [uninitMemberVar]
+ship::ship()
+      ^
+src\ship.cpp:6:7: warning: Member variable 'ship::y' is not initialized in the constructor. [uninitMemberVar]
+ship::ship()
+      ^
+src\zerstoerer.cpp:2:0: information: Include file: <time.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <time.h>
+^
+nofile:0:0: information: Active checkers: 166/802 (use --checkers-report=<filename> to see details) [checkersReport]
+

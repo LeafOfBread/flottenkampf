@@ -1,0 +1,16 @@
+Directory;Absolute Time spent on Inspection Group 'all', s;Percent of Time spent on Inspection Group 'all';Inspections Problem Count in Group 'all';Times Inspection from Group 'all' was Performed
+/data/project;6.20;100.00%;0;1560
+/data/project/qodana-report;5.53;89.17%;0;1247
+/data/project/qodana-report/log;5.41;87.23%;0;812
+/data/project/qodana-report/log/indexing-diagnostic;1.30;20.92%;0;441
+/data/project/qodana-report/log/indexing-diagnostic/project.15375f63;1.30;20.92%;0;429
+/data/project/qodana-report/report;0.10;1.55%;0;278
+/data/project/qodana-report/report/results;0.08;1.29%;0;182
+/data/project/qodana-report/report/results/projectStructure;0.05;0.73%;0;147
+/data/project/qodana-report/report/results/descriptions;0.04;0.57%;0;8
+/data/project/qodana-report/report/versions/VERSION_ID;0.00;0.00%;0;11
+/data/project/qodana-report/report/versions/VERSION_ID/js;0.00;0.00%;0;4
+/data/project/qodana-report/projectStructure;0.02;0.36%;0;149
+/data/project/.vscode;0.26;4.15%;0;13
+/data/project/include;0.00;0.00%;0;13
+/data/project/src;0.00;0.00%;0;14

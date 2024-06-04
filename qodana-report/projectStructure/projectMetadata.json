@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "name": "project",
+  "path": "/data/project",
+  "projectLicenses": [
+    {
+      "key": "PROPRIETARY-LICENSE",
+      "text": "Qodana didn't find a license in your project, that's why the project license is considered to be proprietary. Proprietary license rules are applied for dependency license compatibility checks.",
+      "rules": [],
+      "tags": []
+    }
+  ],
+  "modules": [],
+  "licenses": [],
+  "dependencies": []
+}

@@ -1,0 +1,19 @@
+{
+  "total": 0,
+  "tools inspection": {
+    "Code Inspection": 0
+  },
+  "linter": "QDJVM",
+  "attributes": {
+    "vcs": {
+      "sarifIdea": {
+        "repositoryUri": "https://github.com/LeafOfBread/flottenkampf.git",
+        "revisionId": "efaec1269578312a6c678f38d740ceddc9aaf5d7",
+        "branch": "master"
+      }
+    },
+    "repoUrl": "https://github.com/LeafOfBread/flottenkampf.git",
+    "deviceId": "200820300000000-bab8-89d7-5943-bbefc6969d38",
+    "jobUrl": ""
+  }
+}

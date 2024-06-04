@@ -1,0 +1,12 @@
+{
+  "cloud" : {
+    "url" : "https://qodana.cloud/projects/3BDPG/reports/G4MZx",
+    "reportId" : "G4MZx",
+    "projectId" : "3BDPG",
+    "projectName" : "flottenkampf",
+    "host" : "https://qodana.cloud"
+  },
+  "vcs" : {
+    "origin" : "https://github.com/LeafOfBread/flottenkampf.git"
+  }
+}

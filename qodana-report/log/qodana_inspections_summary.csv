@@ -1,0 +1,49 @@
+Inspection ID;Inspection Group;Inspection Name;Inspection Language;Inspection Type;Absolute Time spent on Inspection, s;Percent of Time spent on Inspection;Problems Count;Times Inspection was Performed
+InjectedReferences;General;Injected references;none;LOCAL;0.99;15.98%;0;7
+CheckDependencyLicenses;Dependency analysis;Check dependency licenses;;GLOBAL;0.41;6.67%;0;1
+SpringFactoryMethodInspection;Spring/Spring Core/XML;Incorrectly defined method referenced in "factory-method" attribute;XML;LOCAL;0.22;3.49%;0;28
+InjectionValueTypeInspection;Spring/Spring Core/XML;Unassignable injection point type in XML application context;XML;LOCAL;0.21;3.46%;0;28
+CustomRegExpInspection;RegExp;Custom RegExp inspection;;LOCAL;0.19;2.99%;0;139
+KotlinTestJUnit;Kotlin;kotlin-test-junit could be used;XML;LOCAL;0.17;2.76%;0;28
+SpringBeanConstructorArgInspection;Spring/Spring Core/XML;Incorrect constructor injection in XML Spring bean;XML;LOCAL;0.16;2.65%;0;28
+ContextComponentScanInconsistencyInspection;Spring/Spring Core/XML;Invalid filter definition in XML-based component scans;XML;LOCAL;0.16;2.63%;0;28
+CdiDomBeans;CDI (Contexts and Dependency Injection);Incorrect bean definitions in beans.xml;XML;LOCAL;0.16;2.55%;0;28
+SpringXmlModelInspection;Spring/Spring Core/XML;Incorrect Spring Core XML-based application context;XML;LOCAL;0.15;2.45%;0;28
+SpringAopWarningsInspection;Spring/Spring AOP;Incorrect Spring AOP aspect or pointcut element;XML;LOCAL;0.15;2.34%;0;28
+SpringBeanInstantiationInspection;Spring/Spring Core/XML;Invalid non-abstract bean instantiation;XML;LOCAL;0.15;2.34%;0;28
+RequiredBeanTypeInspection;Spring/Spring Core/XML;Incorrect injected bean type;XML;LOCAL;0.14;2.26%;0;28
+SpringBeanAttributesInspection;Spring/Spring Core/XML;Conflicting Spring bean attribute;XML;LOCAL;0.14;2.26%;0;28
+UtilSchemaInspection;Spring/Spring Core/XML;Incorrectly configured 'util' schema beans defined in XML application context;XML;LOCAL;0.14;2.20%;0;28
+SpringIntegrationDeprecations21;Spring/Spring Integration;Spring Integration 2.1 deprecations;XML;LOCAL;0.13;2.13%;0;28
+VulnerableLibrariesLocal;Security;Vulnerable declared dependency;none;LOCAL;0.13;2.13%;0;139
+SpringPublicFactoryMethodInspection;Spring/Spring Core/XML;Incorrect non-public method referenced in "factory-method" attribute;XML;LOCAL;0.13;2.02%;0;28
+SpringScopesInspection;Spring/Spring Core/XML;Unknown <bean> scope;XML;LOCAL;0.12;1.99%;0;28
+SpringInjectionValueStyleInspection;Spring/Spring Core/XML;Injection value in XML application context violates conventions;XML;LOCAL;0.11;1.82%;0;28
+SpringXmlAutowireExplicitlyInspection;Spring/Spring Core/XML;Unnecessary autowired dependency in XML application context;XML;LOCAL;0.11;1.81%;0;28
+SpringSecurityDebugActivatedInspection;Spring/Spring Security;Debug mode is activated in the Spring Security configuration;XML;LOCAL;0.11;1.74%;0;28
+DuplicatedBeanNamesInspection;Spring/Spring Core/XML;Duplicated bean names in XML-based application context;XML;LOCAL;0.11;1.74%;0;28
+BvConfigDomInspection;Bean Validation;Incorrect elements in Bean Validation <validation-config> files;XML;LOCAL;0.10;1.67%;0;28
+SpringXmlAutowiringInspection;Spring/Spring Core/XML;Incorrect XML Spring bean autowiring;XML;LOCAL;0.10;1.60%;0;28
+DeprecatedMavenDependency;Kotlin;Deprecated library is used in Maven;XML;LOCAL;0.10;1.59%;0;28
+JdkProxiedBeanTypeInspection;Spring/Spring AOP;Incorrect JDK-proxied bean type;XML;LOCAL;0.09;1.52%;0;28
+SpringSecurityModelInspection;Spring/Spring Security;Incorrect Spring Security XML-based application context;XML;LOCAL;0.09;1.51%;0;28
+AbstractBeanReferencesInspection;Spring/Spring Core/XML;Incorrect reference to abstract bean;XML;LOCAL;0.09;1.51%;0;28
+SpringRequiredPropertyInspection;Spring/Spring Core/XML;Missing @Required property injections in the spring xml bean declaration;XML;LOCAL;0.09;1.47%;0;28
+DifferentMavenStdlibVersion;Kotlin;Library and maven plugin versions are different;XML;LOCAL;0.09;1.47%;0;28
+SpringIncorrectResourceTypeInspection;Spring/Spring Core/XML;Incorrect resource type;XML;LOCAL;0.09;1.41%;0;28
+SpringPlaceholdersInspection;Spring/Spring Core/XML;Unresolved placeholders configured in the Spring XML application context;XML;LOCAL;0.09;1.37%;0;28
+KotlinMavenPluginPhase;Kotlin;Kotlin Maven Plugin misconfigured;XML;LOCAL;0.08;1.36%;0;28
+UnparsedCustomBeanInspection;Spring/Spring Core/XML;Unparsed custom Spring beans;XML;LOCAL;0.08;1.28%;0;28
+DifferentKotlinMavenVersion;Kotlin;Maven and IDE plugins versions are different;XML;LOCAL;0.08;1.28%;0;28
+SpringInjectionValueConsistencyInspection;Spring/Spring Core/XML;Inconsistent injection value in XML application context;XML;LOCAL;0.08;1.21%;0;28
+SpringBeanLookupMethodInspection;Spring/Spring Core/XML;Incorrectly configured XML bean lookup-method;XML;LOCAL;0.07;1.19%;0;28
+SpringIntegrationModel;Spring/Spring Integration;Incorrect Spring Integration XML-based application context;XML;LOCAL;0.07;1.19%;0;28
+BvConstraintMappingsInspection;Bean Validation;Incorrect elements in Bean Validation <constraint-mappings> files;XML;LOCAL;0.07;1.16%;0;28
+SpringInactiveProfileHighlightingInspection;Spring/Spring Core/XML;Inactive profile highlighting;XML;LOCAL;0.07;1.05%;0;28
+SpringBeanNameConventionInspection;Spring/Spring Core/XML;Spring bean name violates conventions;XML;LOCAL;0.06;1.04%;0;28
+SpringAopErrorsInspection;Spring/Spring AOP;Incorrect Spring AOP advice or advisor element;XML;LOCAL;0.06;0.93%;0;28
+SpringBootAdditionalConfig;Spring/Spring Boot;Invalid additional-spring-configuration-metadata.json;JSON;LOCAL;0.02;0.38%;0;55
+DuplicatedCode;General;Duplicated code fragment;none;LOCAL;0.02;0.34%;0;13
+SpringBootApplicationYaml;Spring/Spring Boot;Invalid YAML configuration;yaml;LOCAL;0.00;0.07%;0;3
+JvmCoverageInspection;Code Coverage;Check Kotlin and Java source code coverage;UAST;GLOBAL_SIMPLE;0.00;0.00%;0;104
+UNUSED_IMPORT;Java/Imports;Unused import;JAVA;GLOBAL_SIMPLE;0.00;0.00%;0;7

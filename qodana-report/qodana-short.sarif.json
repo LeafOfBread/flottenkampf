@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/schemastore/schemastore/master/src/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "QDJVM",
+          "fullName": "Qodana for JVM",
+          "version": "241.17569.155",
+          "rules": [],
+          "taxa": [],
+          "language": "en-US",
+          "contents": [
+            "localizedData",
+            "nonLocalizedData"
+          ],
+          "isComprehensive": false
+        },
+        "extensions": []
+      },
+      "invocations": [
+        {
+          "startTimeUtc": "2024-06-03T21:12:24.516058587Z",
+          "exitCode": 0,
+          "executionSuccessful": true
+        }
+      ],
+      "language": "en-US",
+      "versionControlProvenance": [
+        {
+          "repositoryUri": "https://github.com/LeafOfBread/flottenkampf.git",
+          "revisionId": "efaec1269578312a6c678f38d740ceddc9aaf5d7",
+          "branch": "master",
+          "properties": {
+            "repoUrl": "https://github.com/LeafOfBread/flottenkampf.git",
+            "lastAuthorName": "Daniel Gebhart",
+            "vcsType": "Git",
+            "lastAuthorEmail": "daniel.gebhart@hotmail.com"
+          }
+        }
+      ],
+      "results": [],
+      "automationDetails": {
+        "id": "project/qodana/2024-06-03",
+        "guid": "756d68ad-c725-4721-8899-df7b6106160d",
+        "properties": {
+          "jobUrl": ""
+        }
+      },
+      "newlineSequences": [
+        "\r\n",
+        "\n"
+      ],
+      "properties": {
+        "configProfile": "absent",
+        "deviceId": "200820300000000-bab8-89d7-5943-bbefc6969d38",
+        "qodanaNewResultSummary": {
+          "total": 0
+        }
+      }
+    }
+  ]
+}

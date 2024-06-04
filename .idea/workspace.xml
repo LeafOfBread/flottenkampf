@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dc68d94d-44e7-4324-bbf1-a93b2c0935db" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/UML.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/UML.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flottenkampf.depend" beforeDir="false" afterPath="$PROJECT_DIR$/flottenkampf.depend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/jaeger.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/jaeger.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/kreuzer.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/kreuzer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/ship.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/ship.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/zerstoerer.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/zerstoerer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jaeger.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/jaeger.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kreuzer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/kreuzer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ship.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ship.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zerstoerer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/zerstoerer.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2hNyiksz2OmELfNVps9ytT8WAHs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-QDJVM-241.17569.155" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-QDJVM-241.17569.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

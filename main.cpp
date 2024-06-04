@@ -304,7 +304,7 @@ int main()
         cout << RED << "You Have Been Defeated.\n";
     }
 
-    else if (enemyFleetDefeated(enemyFleet, fleetSize)) //falls gegner verliert
+    else if (enemyFleetDefeated(enemyFleet, fleetSize))  //falls gegner verliert
     {
         clearScreen();
         cout << GREEN << "You Have Defeated The Enemy!\n";
